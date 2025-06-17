@@ -53,8 +53,7 @@ Este jogo foi desenvolvido usando:
 
 ## Créditos
 
-Desenvolvido por Manus AI - 2025
-
+Desenvolvido por: Murillo Santiago com colaboração de Isabelle Silva Maia
 ## Licença
 
 Este jogo é para uso pessoal e educacional. Todos os direitos reservados.
