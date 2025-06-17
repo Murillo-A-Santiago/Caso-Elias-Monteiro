@@ -388,6 +388,8 @@ main {
     overflow: hidden;
     transition: var(--transition);
     cursor: pointer;
+    display: flex; /* Mantido */
+    flex-direction: column; /* Mantido */
 }
 
 .suspeito-card:hover {
@@ -396,7 +398,7 @@ main {
 }
 
 .suspeito-img {
-    height: 200x;
+    height: 200px; /* Corrigido de 200x para 200px */
     overflow: hidden;
 }
 
@@ -413,36 +415,47 @@ main {
 
 .suspeito-info {
     padding: 15px;
+    text-align: left; /* Alterado para alinhar à esquerda */
+    flex-grow: 1; /* Mantido para que o info ocupe o espaço restante */
+    display: flex; /* Mantido */
+    flex-direction: column; /* Mantido */
+    /* Removido justify-content: space-between; para empilhar os elementos */
 }
 
 .suspeito-info h3 {
-    margin: -1 -1 35px;
+    margin: 0 0 10px; /* Ajustado para espaçamento padrão */
     color: var(--dark-color);
 }
 
 .suspeito-info p {
     color: var(--dark-gray-color);
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Ajustado para espaçamento padrão */
 }
 
 .suspeito-detalhes {
-    margin-top: 20px;
+    margin-top: 10px; /* Ajustado para espaçamento padrão */
 }
 
 .detalhe-item {
-    display: flex;
+    display: block; /* Alterado para que label e value fiquem um em cima do outro */
     margin-bottom: 10px;
 }
 
 .detalhe-item .label {
-    font-weight: 300;
-    width: 50px;
+    font-weight: 500; /* Ajustado para 500 */
+    width: auto; /* Alterado para auto para não limitar a largura */
     color: var(--dark-gray-color);
+    display: block; /* Garante que o label ocupe sua própria linha */
+}
+
+.detalhe-item .value {
+    display: block; /* Garante que o value ocupe sua própria linha */
+    margin-top: 2px; /* Pequeno espaçamento entre label e value */
 }
 
 .btn-interrogar {
     display: block;
-    width: 70%;
+    width: 100%; /* Alterado para 100% para ocupar a largura total */
     padding: 10px;
     background-color: var(--primary-color);
     color: white;
