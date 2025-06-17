@@ -77,5 +77,5 @@ A solução do caso está em um arquivo separado chamado `SOLUCAO_SECRETA.md`. R
 
 Boa sorte, detetives! O assassino de Elias Monteiro está entre os suspeitos, e cabe a vocês descobrir a verdade!
 
-*Desenvolvido por Manus AI - 2025*
+*Desenvolvido por Murillo Santiago com colaboração de Isabelle Silva Maia - 2025*
 
