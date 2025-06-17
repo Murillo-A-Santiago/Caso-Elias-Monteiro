@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departamento de Investigação Criminal - Caso Elias Monteiro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <h2>Carregando Sistema de Investigação</h2>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <p class="loading-text">Acessando banco de dados criminal...</p>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <i class="fas fa-search"></i>
+            <h1>Departamento de Investigação Criminal</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" data-page="caso" class="active"><i class="fas fa-folder-open"></i> Caso</a></li>
+                <li><a href="#" data-page="suspeitos"><i class="fas fa-user-secret"></i> Suspeitos</a></li>
+                <li><a href="#" data-page="evidencias"><i class="fas fa-fingerprint"></i> Evidências</a></li>
+                <li><a href="#" data-page="charadas"><i class="fas fa-puzzle-piece"></i> Charadas</a></li>
+                <li><a href="#" data-page="conclusao"><i class="fas fa-gavel"></i> Conclusão</a></li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <span>Detetive</span>
+            <div class="user-avatar">
+                <i class="fas fa-user-shield"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Página do Caso -->
+        <section id="caso" class="page active">
+            <div class="page-header">
+                <h2><i class="fas fa-folder-open"></i> Caso #MT-2025-06</h2>
+                <div class="status confidencial">CONFIDENCIAL</div>
+            </div>
+            
+            <div class="grid-container">
+                <div class="card caso-info">
+                    <div class="card-header">
+                        <h3>Informações do Caso</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="info-item">
+                            <span class="label">Vítima:</span>
+                            <span class="value">Elias Monteiro, 55 anos</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Profissão:</span>
+                            <span class="value">Empresário do ramo imobiliário</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Data do Crime:</span>
+                            <span class="value">12/06/2025</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Hora do Crime:</span>
+                            <span class="value">Entre 22h e 00h</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Local:</span>
+                            <span class="value">Mansão Monteiro - Sala de estar</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Causa da Morte:</span>
+                            <span class="value">Traumatismo craniano</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card vitima-info">
+                    <div class="card-header">
+                        <h3>Perfil da Vítima</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="vitima-foto" id="vitima-foto">
+                            <img src="assets/elias_monteiro.png" alt="Elias Monteiro">
+                        </div>
+                        <p>Elias Monteiro era um empresário bem-sucedido do ramo imobiliário, conhecido por suas táticas agressivas de negócios. Tinha muitos inimigos e poucos amigos verdadeiros. Recentemente, havia mudado seu testamento, deserdando seu sobrinho Ricardo.</p>
+                        <p>Segundo relatos, Elias estava envolvido em negócios obscuros e mantinha segredos que poderiam comprometer várias pessoas. Era conhecido por chantagear e manipular aqueles ao seu redor.</p>
+                    </div>
+                </div>
+
+                <div class="card cena-crime">
+                    <div class="card-header">
+                        <h3>Cena do Crime</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="cena-foto" id="cena-foto">
+                            <img src="assets/cena_crime.png" alt="Cena do Crime">
+                        </div>
+                        <p>O corpo foi encontrado na sala de estar da mansão, próximo à lareira. Havia sinais de luta, com um copo de uísque quebrado no chão. A arma do crime, uma estatueta de bronze, foi encontrada na estante com manchas de sangue.</p>
+                        <p>A morte ocorreu durante uma festa na mansão, com vários convidados presentes. O corpo foi descoberto por volta da meia-noite por um dos convidados.</p>
+                    </div>
+                </div>
+
+                <div class="card resumo-caso">
+                    <div class="card-header">
+                        <h3>Resumo da Investigação</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>A investigação identificou seis suspeitos principais, cada um com motivos e oportunidades para cometer o crime. As evidências coletadas incluem a arma do crime, impressões digitais, gravações de segurança e objetos pessoais.</p>
+                        <p>Sua missão é analisar todas as evidências, interrogar os suspeitos e resolver as charadas para descobrir quem é o assassino de Elias Monteiro.</p>
+                        <div class="stats-container">
+                            <div class="stat">
+                                <span class="stat-value">6</span>
+                                <span class="stat-label">Suspeitos</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">10</span>
+                                <span class="stat-label">Evidências</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">4</span>
+                                <span class="stat-label">Charadas</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de Suspeitos -->
+        <section id="suspeitos" class="page">
+            <div class="page-header">
+                <h2><i class="fas fa-user-secret"></i> Suspeitos</h2>
+                <div class="status investigacao">EM INVESTIGAÇÃO</div>
+            </div>
+            
+            <div class="suspeitos-grid" id="suspeitos-grid">
+                <!-- Suspeitos serão inseridos via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Página de Evidências -->
+        <section id="evidencias" class="page">
+            <div class="page-header">
+                <h2><i class="fas fa-fingerprint"></i> Evidências</h2>
+                <div class="status forense">ANÁLISE FORENSE</div>
+            </div>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="fisicas">Evidências Físicas</button>
+                <button class="tab-btn" data-tab="digitais">Evidências Digitais</button>
+            </div>
+            
+            <div id="fisicas" class="tab-content active">
+                <div class="evidencias-grid" id="evidencias-fisicas-grid">
+                    <!-- Evidências físicas serão inseridas via JavaScript -->
+                </div>
+            </div>
+            
+            <div id="digitais" class="tab-content">
+                <div class="evidencias-grid" id="evidencias-digitais-grid">
+                    <!-- Evidências digitais serão inseridas via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de Charadas -->
+        <section id="charadas" class="page">
+            <div class="page-header">
+                <h2><i class="fas fa-puzzle-piece"></i> Charadas</h2>
+                <div class="status desafio">DESAFIO</div>
+            </div>
+            
+            <div class="charadas-container" id="charadas-container">
+                <!-- Charadas serão inseridas via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Página de Conclusão -->
+        <section id="conclusao" class="page">
+            <div class="page-header">
+                <h2><i class="fas fa-gavel"></i> Conclusão</h2>
+                <div class="status decisao">DECISÃO FINAL</div>
+            </div>
+            
+            <div class="card conclusao-card">
+                <div class="card-header">
+                    <h3>Quem é o Assassino?</h3>
+                </div>
+                <div class="card-body">
+                    <p>Após analisar todas as evidências, interrogar os suspeitos e resolver as charadas, quem você acredita ser o assassino de Elias Monteiro?</p>
+                    
+                    <div class="suspeitos-selecao" id="suspeitos-selecao">
+                        <!-- Opções de suspeitos serão inseridas via JavaScript -->
+                    </div>
+                    
+                    <div class="motivos-container">
+                        <h4>Justifique sua escolha:</h4>
+                        <textarea id="justificativa" placeholder="Explique por que você acredita que este suspeito é o assassino..."></textarea>
+                    </div>
+                    
+                    <button id="verificar-conclusao" class="btn btn-primary">Verificar Conclusão</button>
+                </div>
+            </div>
+            
+            <div id="resultado-container" class="card resultado-card hidden">
+                <div class="card-header">
+                    <h3>Resultado da Investigação</h3>
+                </div>
+                <div class="card-body">
+                    <div id="resultado-content">
+                        <!-- Resultado será inserido via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal de Interrogatório -->
+    <div id="interrogatorio-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h3>Interrogatório</h3>
+                <div class="suspeito-info">
+                    <img id="modal-suspeito-img" src="" alt="Suspeito">
+                    <div>
+                        <h4 id="modal-suspeito-nome"></h4>
+                        <p id="modal-suspeito-relacao"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="declaracao">
+                    <h4>Declaração Inicial:</h4>
+                    <p id="modal-declaracao"></p>
+                </div>
+                <div class="interrogatorio">
+                    <h4>Perguntas e Respostas:</h4>
+                    <div id="modal-perguntas">
+                        <!-- Perguntas e respostas serão inseridas via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Evidência -->
+    <div id="evidencia-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <h3>Análise de Evidência</h3>
+                <h4 id="modal-evidencia-nome"></h4>
+            </div>
+            <div class="modal-body">
+                <div class="evidencia-img">
+                    <img id="modal-evidencia-img" src="" alt="Evidência">
+                </div>
+                <div class="evidencia-info">
+                    <p id="modal-evidencia-descricao"></p>
+                    <div class="evidencia-detalhes">
+                        <div class="detalhe">
+                            <span class="label">Tipo:</span>
+                            <span id="modal-evidencia-tipo" class="value"></span>
+                        </div>
+                        <div class="detalhe">
+                            <span class="label">Significância:</span>
+                            <span id="modal-evidencia-significancia" class="value"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+

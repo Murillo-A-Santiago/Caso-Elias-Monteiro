@@ -1,0 +1,1071 @@
+/* Estilos Gerais */
+:root {
+    --primary-color: #1a3a6e;
+    --secondary-color: #c0392b;
+    --accent-color: #f39c12;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --success-color: #27ae60;
+    --warning-color: #f39c12;
+    --danger-color: #c0392b;
+    --info-color: #3498db;
+    --gray-color: #95a5a6;
+    --dark-gray-color: #7f8c8d;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Tela de Carregamento */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loading-content {
+    text-align: center;
+    color: white;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.progress-bar {
+    width: 300px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: white;
+    width: 0%;
+    transition: width 3s ease;
+}
+
+.loading-text {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a i {
+    margin-right: 5px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 500;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info span {
+    margin-right: 10px;
+}
+
+.user-avatar {
+    width: 35px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Content */
+main {
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.page-header h2 {
+    font-size: 24px;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+}
+
+.page-header h2 i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.status.confidencial {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.status.investigacao {
+    background-color: var(--info-color);
+    color: white;
+}
+
+.status.forense {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.status.desafio {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.status.decisao {
+    background-color: var(--dark-color);
+    color: white;
+}
+
+/* Cards */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card-header {
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+.card-header h3 {
+    font-size: 18px;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    grid-template-areas:
+        "caso-info vitima-info"
+        "cena-crime resumo-caso";
+}
+
+.caso-info {
+    grid-area: caso-info;
+}
+
+.vitima-info {
+    grid-area: vitima-info;
+}
+
+.cena-crime {
+    grid-area: cena-crime;
+}
+
+.resumo-caso {
+    grid-area: resumo-caso;
+}
+
+/* Informações do Caso */
+.info-item {
+    display: flex;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item .label {
+    font-weight: 500;
+    width: 120px;
+    color: var(--dark-gray-color);
+}
+
+.info-item .value {
+    flex: 1;
+}
+
+/* Perfil da Vítima */
+.vitima-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 3px solid var(--primary-color);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.vitima-foto:hover {
+    transform: scale(1.05);
+}
+
+.vitima-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Cena do Crime */
+.cena-foto {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cena-foto:hover {
+    transform: scale(1.02);
+}
+
+.cena-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estatísticas */
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-value {
+    display: block;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.stat-label {
+    font-size: 14px;
+    color: var(--dark-gray-color);
+}
+
+/* Suspeitos */
+.suspeitos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.suspeito-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.suspeito-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.suspeito-img {
+    height: 200x;
+    overflow: hidden;
+}
+
+.suspeito-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.suspeito-card:hover .suspeito-img img {
+    transform: scale(1.05);
+}
+
+.suspeito-info {
+    padding: 15px;
+}
+
+.suspeito-info h3 {
+    margin: -1 -1 35px;
+    color: var(--dark-color);
+}
+
+.suspeito-info p {
+    color: var(--dark-gray-color);
+    margin-bottom: 20px;
+}
+
+.suspeito-detalhes {
+    margin-top: 20px;
+}
+
+.detalhe-item {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.detalhe-item .label {
+    font-weight: 300;
+    width: 50px;
+    color: var(--dark-gray-color);
+}
+
+.btn-interrogar {
+    display: block;
+    width: 70%;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 15px;
+    text-align: center;
+}
+
+.btn-interrogar:hover {
+    background-color: #15305d;
+}
+
+/* Evidências */
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.tab-btn:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.tab-btn.active:after {
+    transform: scaleX(1);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.evidencias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.evidencia-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.evidencia-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.evidencia-img {
+    height: 180px;
+    overflow: hidden;
+}
+
+.evidencia-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.evidencia-card:hover .evidencia-img img {
+    transform: scale(1.05);
+}
+
+.evidencia-info {
+    padding: 15px;
+}
+
+.evidencia-info h3 {
+    margin: 0 0 5px;
+    color: var(--dark-color);
+}
+
+.evidencia-tipo {
+    display: inline-block;
+    padding: 3px 8px;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.evidencia-tipo.fisica {
+    background-color: #e3f2fd;
+    color: #1565c0;
+}
+
+.evidencia-tipo.digital {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.evidencia-tipo.arma {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.significancia {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.significancia.alta {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.significancia.media {
+    background-color: #fff8e1;
+    color: #ff8f00;
+}
+
+/* Charadas */
+.charadas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.charada-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.charada-header {
+    padding: 15px 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.charada-header h3 {
+    font-size: 18px;
+    color: var(--dark-color);
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.charada-header h3 i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.charada-status {
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.charada-status.pendente {
+    background-color: #fff8e1;
+    color: #ff8f00;
+}
+
+.charada-status.resolvida {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.charada-body {
+    padding: 20px;
+}
+
+.charada-tipo {
+    display: inline-block;
+    padding: 3px 8px;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    border-radius: 4px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.charada-tipo.anagrama {
+    background-color: #e8eaf6;
+    color: #3f51b5;
+}
+
+.charada-tipo.codigo {
+    background-color: #f3e5f5;
+    color: #9c27b0;
+}
+
+.charada-tipo.temporal {
+    background-color: #e0f2f1;
+    color: #00796b;
+}
+
+.charada-tipo.logica {
+    background-color: #fce4ec;
+    color: #c2185b;
+}
+
+.charada-descricao {
+    margin-bottom: 15px;
+}
+
+.charada-dica {
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-left: 3px solid var(--info-color);
+    margin-bottom: 15px;
+}
+
+.charada-dica h4 {
+    margin: 0 0 5px;
+    color: var(--info-color);
+    font-size: 14px;
+}
+
+.charada-input {
+    margin-top: 15px;
+}
+
+.charada-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.charada-input button {
+    padding: 10px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.charada-input button:hover {
+    background-color: #15305d;
+}
+
+.charada-solucao {
+    background-color: #e8f5e9;
+    padding: 10px 15px;
+    border-left: 3px solid var(--success-color);
+    margin-top: 15px;
+    display: none;
+}
+
+.charada-solucao h4 {
+    margin: 0 0 5px;
+    color: var(--success-color);
+    font-size: 14px;
+}
+
+.charada-solucao p {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Conclusão */
+.conclusao-card {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.suspeitos-selecao {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.suspeito-opcao {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.suspeito-opcao:hover {
+    background-color: #f8f9fa;
+}
+
+.suspeito-opcao.selected {
+    border-color: var(--primary-color);
+    background-color: #e3f2fd;
+}
+
+.suspeito-opcao img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.motivos-container {
+    margin-top: 20px;
+}
+
+.motivos-container h4 {
+    margin-bottom: 10px;
+}
+
+.motivos-container textarea {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #15305d;
+}
+
+.resultado-card {
+    max-width: 800px;
+    margin: 20px auto 0;
+}
+
+.resultado-card.hidden {
+    display: none;
+}
+
+.resultado-correto {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.resultado-correto h4 {
+    color: var(--success-color);
+    margin: 0 0 10px;
+}
+
+.resultado-incorreto {
+    background-color: #ffebee;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.resultado-incorreto h4 {
+    color: var(--danger-color);
+    margin: 0 0 10px;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: white;
+    margin: 50px auto;
+    padding: 0;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-btn:hover {
+    color: var(--dark-color);
+}
+
+.modal-header {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-header h3 {
+    margin: 0 0 15px;
+    color: var(--dark-color);
+}
+
+.suspeito-info {
+    display: flex;
+    align-items: center;
+}
+
+.suspeito-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.suspeito-info h4 {
+    margin: 0 0 5px;
+    color: var(--dark-color);
+}
+
+.suspeito-info p {
+    margin: 0;
+    color: var(--dark-gray-color);
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.declaracao {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.declaracao h4 {
+    margin: 0 0 10px;
+    color: var(--dark-color);
+}
+
+.declaracao p {
+    font-style: italic;
+    margin: 0;
+}
+
+.interrogatorio h4 {
+    margin: 0 0 15px;
+    color: var(--dark-color);
+}
+
+.pergunta-resposta {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.pergunta-resposta:last-child {
+    border-bottom: none;
+}
+
+.pergunta {
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.resposta {
+    padding-left: 15px;
+    border-left: 3px solid #eee;
+}
+
+.evidencia-img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.evidencia-img img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+}
+
+.evidencia-detalhes {
+    display: flex;
+    margin-top: 15px;
+}
+
+.detalhe {
+    margin-right: 20px;
+}
+
+.detalhe .label {
+    font-weight: 500;
+    color: var(--dark-gray-color);
+}
+
+/* Responsividade */
+@media (max-width: 1200px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "caso-info"
+            "vitima-info"
+            "cena-crime"
+            "resumo-caso";
+    }
+    
+    .charadas-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    nav ul li {
+        margin: 5px;
+    }
+    
+    .user-info {
+        margin-top: 15px;
+    }
+    
+    main {
+        padding: 15px;
+    }
+    
+    .suspeitos-grid, .evidencias-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 20px auto;
+    }
+    
+    .suspeitos-selecao {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s;
+}
+
